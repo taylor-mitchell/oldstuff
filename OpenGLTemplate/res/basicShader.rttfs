@@ -1,0 +1,14 @@
+#version 120
+
+layout(location = 0) out vec3 color;
+
+
+in vec2 UV;
+
+
+uniform sampler2D diffuse;
+
+void main()
+{
+	color = texture(diffuse, UV.x, UV.y).xyz
+}
